@@ -16,7 +16,7 @@ function Header() {
 function App() {
   return (
     <div>
-      <Header> </Header>
+      <Header />
       <main>
         <h2>Time to get started!</h2>
       </main>
