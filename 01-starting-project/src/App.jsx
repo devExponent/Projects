@@ -1,22 +1,6 @@
 import { CORE_CONCEPTS } from "./data";
 import Header from "./components/Header";
-
-const reactDescriptions = ["Fundamental", "Crucial", "Core"];
-function CoreConcept({ image, title, textDescription }) {
-  return (
-    <>
-      <li>
-        <img src={image} alt={title} />
-        <h3>{title}</h3>
-        <p>{textDescription}</p>
-      </li>
-    </>
-  );
-}
-
-function genRandomInt(max) {
-  return Math.floor(Math.random() * (max + 1));
-}
+import CoreConcept from "./components/CoreConcepts";
 
 function App() {
   return (
