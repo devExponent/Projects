@@ -3,12 +3,13 @@ import { CORE_CONCEPTS } from "./data";
 import Header from "./components/Header/Header";
 import CoreConcept from "./components/CoreConcepts";
 import TabButton from "./components/TabButton";
+import { EXAMPLES } from "./data.js";
 
 function App() {
-  const [dynamic, setDynamic] = useState("Please click a button");
+  const [selectedTopic, setSelectedTopic] = useState("components");
 
   function handleClick(selectedButton) {
-    setDynamic(selectedButton);
+    setSelectedTopic(selectedButton);
   }
 
   return (
@@ -27,38 +28,44 @@ function App() {
       </section>
       <section id="examples">
         <h2>Examples</h2>
-        <div style={{ display: "flex" }}>
+        <menu>
           <TabButton
             onSelect={() => {
-              handleClick("Components");
+              handleClick("components");
             }}
           >
             Components
           </TabButton>
           <TabButton
             onSelect={() => {
-              handleClick("JSX");
+              handleClick("jsx");
             }}
           >
             JSX
           </TabButton>
           <TabButton
             onSelect={() => {
-              handleClick("Props");
+              handleClick("props");
             }}
           >
             Props
           </TabButton>
           <TabButton
             onSelect={() => {
-              handleClick("State");
+              handleClick("state");
             }}
           >
             State
           </TabButton>
+        </menu>
+        <div id="tab-content">
+          <h3>{EXAMPLES[selectedTopic].title}</h3>
+          <p>{EXAMPLES[selectedTopic].description}</p>
+          <pre>
+            <code>{EXAMPLES[selectedTopic].code} </code>
+          </pre>
         </div>
       </section>
-      {dynamic}
     </main>
   );
 }
