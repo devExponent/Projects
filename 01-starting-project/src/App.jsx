@@ -1,10 +1,15 @@
+import { useState } from "react";
 import { CORE_CONCEPTS } from "./data";
 import Header from "./components/Header/Header";
 import CoreConcept from "./components/CoreConcepts";
 import TabButton from "./components/TabButton";
 
 function App() {
-  function handleClick() {}
+  const [dynamic, setDynamic] = useState("Please click a button");
+
+  function handleClick(selectedButton) {
+    setDynamic(selectedButton);
+  }
 
   return (
     <main>
@@ -23,12 +28,37 @@ function App() {
       <section id="examples">
         <h2>Examples</h2>
         <div style={{ display: "flex" }}>
-          <TabButton onSelect={handleClick}>Components</TabButton>
-          <TabButton>JSX</TabButton>
-          <TabButton>Props</TabButton>
-          <TabButton>State</TabButton>
+          <TabButton
+            onSelect={() => {
+              handleClick("Components");
+            }}
+          >
+            Components
+          </TabButton>
+          <TabButton
+            onSelect={() => {
+              handleClick("JSX");
+            }}
+          >
+            JSX
+          </TabButton>
+          <TabButton
+            onSelect={() => {
+              handleClick("Props");
+            }}
+          >
+            Props
+          </TabButton>
+          <TabButton
+            onSelect={() => {
+              handleClick("State");
+            }}
+          >
+            State
+          </TabButton>
         </div>
       </section>
+      {dynamic}
     </main>
   );
 }
