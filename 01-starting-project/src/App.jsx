@@ -20,7 +20,8 @@ function App() {
       </section>
       <section id="examples">
         <h2>Examples</h2>
-        <menu>{/* <TabButton>Components</TabButton> */}</menu>
+        <TabButton>Components</TabButton>
+        <TabButton>Components</TabButton>
       </section>
     </div>
   );
