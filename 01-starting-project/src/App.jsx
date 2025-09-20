@@ -4,8 +4,10 @@ import CoreConcept from "./components/CoreConcepts";
 import TabButton from "./components/TabButton";
 
 function App() {
+  function handleClick() {}
+
   return (
-    <div>
+    <main>
       <Header />
       <main>
         <h2>Time to get started!</h2>
@@ -20,10 +22,14 @@ function App() {
       </section>
       <section id="examples">
         <h2>Examples</h2>
-        <TabButton>Components</TabButton>
-        <TabButton>Components</TabButton>
+        <div style={{ display: "flex" }}>
+          <TabButton onSelect={handleClick}>Components</TabButton>
+          <TabButton>JSX</TabButton>
+          <TabButton>Props</TabButton>
+          <TabButton>State</TabButton>
+        </div>
       </section>
-    </div>
+    </main>
   );
 }
 
