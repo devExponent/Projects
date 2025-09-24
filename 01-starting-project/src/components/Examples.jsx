@@ -12,7 +12,7 @@ const Examples = () => {
   }
   return (
     <>
-      <Section title="Examples" Styling={"examples"}>
+      <Section title="Examples" id="examples">
         <menu>
           <TabButton
             selected={selectedTopic === "components"}

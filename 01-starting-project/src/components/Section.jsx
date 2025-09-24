@@ -1,9 +1,9 @@
 import React from "react";
 
-const Section = ({ title, children, Styling }) => {
+const Section = ({ title, children, ...props }) => {
   return (
     <>
-      <section id={Styling}>
+      <section {...props}>
         <h2>{title}</h2>
         {children}
       </section>
