@@ -27,42 +27,48 @@ const Examples = () => {
   return (
     <>
       <Section title="Examples" id="examples">
-        <Tabs></Tabs>
-        <menu>
-          <TabButton
-            selected={selectedTopic === "components"}
-            onClick={() => {
-              handleClick("components");
-            }}
+        <>
+          <Tabs
+            buttons={
+              <>
+                <TabButton
+                  selected={selectedTopic === "components"}
+                  onClick={() => {
+                    handleClick("components");
+                  }}
+                >
+                  Components
+                </TabButton>
+                <TabButton
+                  selected={selectedTopic === "jsx"}
+                  onClick={() => {
+                    handleClick("jsx");
+                  }}
+                >
+                  JSX
+                </TabButton>
+                <TabButton
+                  selected={selectedTopic === "props"}
+                  onClick={() => {
+                    handleClick("props");
+                  }}
+                >
+                  Props
+                </TabButton>
+                <TabButton
+                  selected={selectedTopic === "state"}
+                  onClick={() => {
+                    handleClick("state");
+                  }}
+                >
+                  State
+                </TabButton>
+              </>
+            }
           >
-            Components
-          </TabButton>
-          <TabButton
-            selected={selectedTopic === "jsx"}
-            onClick={() => {
-              handleClick("jsx");
-            }}
-          >
-            JSX
-          </TabButton>
-          <TabButton
-            selected={selectedTopic === "props"}
-            onClick={() => {
-              handleClick("props");
-            }}
-          >
-            Props
-          </TabButton>
-          <TabButton
-            selected={selectedTopic === "state"}
-            onClick={() => {
-              handleClick("state");
-            }}
-          >
-            State
-          </TabButton>
-        </menu>
-        {tabContent}
+            {tabContent}
+          </Tabs>
+        </>
       </Section>
     </>
   );
