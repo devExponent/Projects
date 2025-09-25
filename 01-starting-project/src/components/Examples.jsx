@@ -25,7 +25,7 @@ const Examples = () => {
     setSelectedTopic(selectedButton);
   }
   return (
-    <>
+    
       <Section title="Examples" id="examples">
         <>
           <Tabs
