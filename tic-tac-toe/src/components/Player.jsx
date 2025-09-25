@@ -11,7 +11,7 @@ const Player = ({ name, symbol }) => {
         {!isEditing ? (
           <span className="player-name">{name}</span>
         ) : (
-          <input type="text" />
+          <input type="text" value="fggf" required />
         )}
         <span className="player-symbol">{symbol}</span>
       </span>
