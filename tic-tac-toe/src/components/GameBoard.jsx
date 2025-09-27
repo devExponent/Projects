@@ -8,12 +8,10 @@ const initialGameBoard = [
 
 const GameBoard = () => {
   const [gameBoard, setGameBoard] = useState(initialGameBoard);
-  function handlePlayer() {
-    setGameBoard((prevGameBoard) => !prevGameBoard);
-  }
+  function handlePlayer() {}
   return (
     <ol id="game-board">
-      {gameBoard.map((row, rowIndex) => (
+      {initialGameBoard.map((row, rowIndex) => (
         <li key={rowIndex}>
           <ol>
             {row.map((playerSymbol, playerIndex) => (
