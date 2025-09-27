@@ -10,11 +10,14 @@ function App() {
   return (
     <main>
       <div id="game-container">
-        <ol id="players">
-          <Player name="Player 1" symbol="X" />
-          <Player name="Player 2" symbol="Y" />
+        <ol id="players" className="highlight-player">
+          <Player name="Player 1" symbol="X" isActive={activePlayer === "X"} />
+          <Player name="Player 2" symbol="Y" isActive={activePlayer === "0"} />
         </ol>
-        <GameBoard onSelectSquare={handleSelectSquare} />
+        <GameBoard
+          onSelectSquare={handleSelectSquare}
+          selActivePlayerSymbol={activePlayer}
+        />
       </div>
       LOG
     </main>
