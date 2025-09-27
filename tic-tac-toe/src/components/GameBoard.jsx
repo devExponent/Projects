@@ -8,15 +8,29 @@ const initialGameBoard = [
 
 const GameBoard = () => {
   const [gameBoard, setGameBoard] = useState(initialGameBoard);
-  function handlePlayer() {}
+  function handlePlayer(rowIndex, playerIndex) {
+    setGameBoard((prevGameBoad) => {
+      const updatedBoard = [
+        ...prevGameBoad.map((innerArray) => [...innerArray]),
+      ];
+      updatedBoard[rowIndex][playerIndex] = "X";
+      return updatedBoard;
+    });
+  }
   return (
     <ol id="game-board">
-      {initialGameBoard.map((row, rowIndex) => (
+      {gameBoard.map((row, rowIndex) => (
         <li key={rowIndex}>
           <ol>
             {row.map((playerSymbol, playerIndex) => (
               <li key={playerIndex}>
-                <button onClick={handlePlayer}>{playerSymbol}</button>
+                <button
+                  onClick={() => {
+                    handlePlayer(rowIndex, playerIndex);
+                  }}
+                >
+                  {playerSymbol}
+                </button>
               </li>
             ))}
           </ol>
@@ -27,3 +41,6 @@ const GameBoard = () => {
 };
 
 export default GameBoard;
+const me = () => {
+  <h1 onClick={() => djjddjdjjd()}></h1>;
+};
