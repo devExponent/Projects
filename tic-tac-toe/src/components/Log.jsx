@@ -1,11 +1,9 @@
 import React from "react";
 
-const Log = () => {
+const Log = ({ clickedPlayer }) => {
   return (
     <>
-      <ol id="log">
-        <h1>djbffv</h1>
-      </ol>
+      <ol id="log"></ol>
     </>
   );
 };
