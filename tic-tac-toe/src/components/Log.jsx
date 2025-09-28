@@ -1,9 +1,14 @@
-import React from "react";
-
-const Log = ({ clickedPlayer }) => {
+const Log = ({ ActivePlayerTurns }) => {
   return (
     <>
-      <ol id="log"></ol>
+      <ol id="log">
+        {ActivePlayerTurns.map((playerTurns) => (
+          <li key={`${playerTurns.row} ${playerTurns.col}`}>
+            {playerTurns.player} selected {playerTurns.square.row},{" "}
+            {playerTurns.square.col}
+          </li>
+        ))}
+      </ol>
     </>
   );
 };
