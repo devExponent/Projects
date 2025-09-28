@@ -7,6 +7,8 @@ const initialGameBoard = [
 ];
 
 const GameBoard = ({ onSelectSquare, turns }) => {
+  let gameBoard = initialGameBoard;
+
   // function handlePlayer(rowIndex, playerIndex) {
   //   setGameBoard((prevGameBoard) => {
   //     const updatedBoard = [
@@ -17,7 +19,7 @@ const GameBoard = ({ onSelectSquare, turns }) => {
   //   });
   //   onSelectSquare();
   // }
-  let gameBoard = initialGameBoard;
+
   for (const turn of turns) {
     const { square, player } = turn;
     const { row, col } = square;
@@ -43,6 +45,3 @@ const GameBoard = ({ onSelectSquare, turns }) => {
 };
 
 export default GameBoard;
-const me = () => {
-  <h1 onClick={() => djjddjdjjd()}></h1>;
-};
