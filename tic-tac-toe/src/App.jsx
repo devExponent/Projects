@@ -20,11 +20,11 @@ function deriveActivePlayer(gameTurns) {
 
 let gameBoard = initialGameBoard;
 
-  for (const turn of gameTurns) {
-    const { square, player } = turn;
-    const { row, col } = square;
-    gameBoard[row][col] = player;
-  }
+for (const turn of gameTurns) {
+  const { square, player } = turn;
+  const { row, col } = square;
+  gameBoard[row][col] = player;
+}
 
 function App() {
   // const [activePlayer, setActiveplayer] = useState("X");
@@ -32,11 +32,13 @@ function App() {
   const activePlayer = deriveActivePlayer(gameTurns);
 
   function handleSelectSquare(rowIndex, playerIndex) {
-
-    for (const combination of WINNING_COMBINATIONS){
-      const firstSquareSymbol =;
-      const secondSquareSymbol =;
-      const thirdSquareSymbol =;
+    for (const combination of WINNING_COMBINATIONS) {
+      const firstSquareSymbol =
+        gameBoard[combination[0].row][combination[0].column];
+      const secondSquareSymbol =
+        gameBoard[combination[1].row][combination[1].column];
+      const thirdSquareSymbol =
+        gameBoard[combination[2].row][combination[2].column];
     }
     // setActiveplayer((curActivePlayer) => (curActivePlayer === "X" ? "0" : "X"));
 
