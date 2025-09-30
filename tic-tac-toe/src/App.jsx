@@ -19,10 +19,6 @@ function deriveActivePlayer(gameTurns) {
   return currentPlayer;
 }
 
-function handleRematch() {
-  setGameTurns({});
-}
-
 function App() {
   const [gameTurns, setGameTurns] = useState([]);
   const activePlayer = deriveActivePlayer(gameTurns);
@@ -62,6 +58,10 @@ function App() {
       ];
       return updatedTurns;
     });
+  }
+
+  function handleRematch() {
+    setGameTurns([]);
   }
   return (
     <main>
