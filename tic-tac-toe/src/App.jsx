@@ -5,7 +5,7 @@ import Log from "./components/Log";
 
 function deriveActivePlayer(gameTurns) {
   let currentPlayer = "X";
-  if (gameTurns > 0 && gameTurns[0].player === "X") {
+  if (gameTurns.length > 0 && gameTurns[0].player === "X") {
     currentPlayer = "0";
   }
   return currentPlayer;
@@ -20,10 +20,7 @@ function App() {
     // setActiveplayer((curActivePlayer) => (curActivePlayer === "X" ? "0" : "X"));
 
     setGameTurns((prevGameturns) => {
-      let currentPlayer = "X";
-      if (prevGameturns.length > 0 && prevGameturns[0].player === "X") {
-        currentPlayer = "0";
-      }
+      const currentPlayer = deriveActivePlayer(prevGameturns);
       const updatedTurns = [
         { square: { row: rowIndex, col: playerIndex }, player: currentPlayer },
         ...prevGameturns,
