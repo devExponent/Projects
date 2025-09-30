@@ -5,7 +5,7 @@ const Player = ({ name, symbol, isActive, handleChange }) => {
   const [playerName, setPlayerName] = useState(name);
   function handleEdit() {
     setIsEditing((editing) => !editing);
-    if (editing) {
+    if (isEditing) {
       handleChange(symbol, playerName);
     }
   }
