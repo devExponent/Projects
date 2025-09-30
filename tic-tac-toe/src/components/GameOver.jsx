@@ -1,9 +1,9 @@
-const GameOver = ({ champion }) => {
+const GameOver = ({ champion, Rematch }) => {
   return (
     <div id="game-over">
-      <h>Game Over!</h>
-      <>{champion}</>
-      <button>Rematch!</button>
+      <h2>Game Over!</h2>
+      <p>{champion} Won!</p>
+      <button onClick={Rematch}>Rematch!</button>
     </div>
   );
 };

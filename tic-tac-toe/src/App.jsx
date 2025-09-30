@@ -19,8 +19,11 @@ function deriveActivePlayer(gameTurns) {
   return currentPlayer;
 }
 
+function handleRematch() {
+  setGameTurns({});
+}
+
 function App() {
-  // const [activePlayer, setActiveplayer] = useState("X");
   const [gameTurns, setGameTurns] = useState([]);
   const activePlayer = deriveActivePlayer(gameTurns);
   let gameBoard = initialGameBoard;
@@ -67,7 +70,7 @@ function App() {
           <Player name="Player 1" symbol="X" isActive={activePlayer === "X"} />
           <Player name="Player 2" symbol="Y" isActive={activePlayer === "0"} />
         </ol>
-        {winner && <GameOver champion={winner} />}
+        {winner && <GameOver champion={winner} Rematch={handleRematch} />}
         <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
       </div>
       <Log ActivePlayerTurns={gameTurns} />
