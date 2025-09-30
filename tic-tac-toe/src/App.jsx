@@ -22,15 +22,16 @@ function deriveActivePlayer(gameTurns) {
 function App() {
   const [gameTurns, setGameTurns] = useState([]);
   const activePlayer = deriveActivePlayer(gameTurns);
-  let gameBoard = initialGameBoard;
+
+  let gameBoard = [...initialGameBoard.map((innerArray) => [...innerArray])];
+  let winner;
+  const hasDraw = gameTurns.length === 9 && !winner;
+
   for (const turn of gameTurns) {
     const { square, player } = turn;
     const { row, col } = square;
     gameBoard[row][col] = player;
   }
-  let winner;
-
-  const hasDraw = gameTurns.length === 9 && !winner;
 
   for (const combination of WINNING_COMBINATIONS) {
     const firstSquareSymbol =
