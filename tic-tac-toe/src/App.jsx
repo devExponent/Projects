@@ -23,7 +23,7 @@ function App() {
   const [gameTurns, setGameTurns] = useState([]);
   const [handlePlayerName, setHandlePlayerName] = useState({
     X: "Player 1",
-    name: "Player 2",
+    0: "Player 2",
   });
   const activePlayer = deriveActivePlayer(gameTurns);
 
