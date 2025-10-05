@@ -1,9 +1,9 @@
 const Inputs = () => {
   return (
     <>
-      <main>
-        <input type="text" placeholder="Hello" />
-      </main>
+      <div>
+        <input type="text" />
+      </div>
     </>
   );
 };
