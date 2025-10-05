@@ -1,20 +1,9 @@
-import Inputs from "./components/Inputs";
+import UserInputs from "./components/UserInputs";
+import Inputs from "./components/UserInputs";
 function App() {
   return (
     <>
-      <div id="user-input">
-        <div className="input-group">
-          <div>
-            <p></p>
-            <Inputs />
-          </div>
-          <Inputs />
-        </div>
-        <div className="input-group">
-          <Inputs />
-          <Inputs />
-        </div>
-      </div>
+      <UserInputs />
     </>
   );
 }
