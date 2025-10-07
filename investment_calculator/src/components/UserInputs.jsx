@@ -44,11 +44,23 @@ const UserInputs = ({ inputs, dynamiChange }) => {
         <div className="input-group">
           <p>
             <label>Expected return</label>
-            <input type="number" required />
+            <input
+              type="number"
+              required
+              name="expectedHours"
+              value={inputs.expectedHours}
+              onChange={dynamiChange}
+            />
           </p>
           <p>
             <label>Duration</label>
-            <input type="number" required />
+            <input
+              type="number"
+              required
+              name="duration"
+              value={inputs.duration}
+              onChange={dynamiChange}
+            />
           </p>
         </div>
       </div>

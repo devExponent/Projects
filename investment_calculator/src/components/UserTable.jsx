@@ -1,7 +1,9 @@
 import React from "react";
-const rows = ["row", "row", "row", "row", "row"];
+// const rows = ["row", "row", "row", "row", "row"];
 
-const UserTable = () => {
+const UserTable = ({ inputs }) => {
+  let total =
+    Number(inputs.initialInvestment) + Number(inputs.annualInvestment);
   return (
     <table id="result">
       <thead>
@@ -15,9 +17,14 @@ const UserTable = () => {
       </thead>
       <tbody>
         <tr>
-          {rows.map((roy, index) => (
+          {/* {rows .map((roy, index) => (
             <td key={index}>{roy}</td>
-          ))}
+          ))} */}
+          <td>{inputs.initialInvestment}</td>
+          <td>{inputs.annualInvestment}</td>
+          <td>{inputs.expectedHours}</td>
+          <td>{inputs.duration}</td>
+          <td>{total}</td>
         </tr>
       </tbody>
     </table>

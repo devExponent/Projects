@@ -9,6 +9,7 @@ function App() {
     expectedHours: "",
     Duration: "",
   });
+
   function handleInvestment(e) {
     const { name, value } = e.target;
     setInvestment((prev) => ({
@@ -19,8 +20,9 @@ function App() {
 
   return (
     <>
-      <UserInputs />
-      <UserTable />
+      <UserInputs inputs={investment} dynamiChange={handleInvestment} />
+
+      <UserTable inputs={investment} />
     </>
   );
 }
