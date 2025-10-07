@@ -1,23 +1,38 @@
 import { useState } from "react";
 
 const UserInputs = () => {
-  const [change, setHandleChange] = useState("");
-  const [chy, setChy] = useState("44");
-  function changing(e) {
-    setHandleChange(e.target.value);
-    setChy(e.target.value);
+  const [inputs, setInputs] = useState({
+    initialInvestment: "",
+    annualInvestment: "",
+    expectedHours: "",
+    Duration: "",
+  });
+
+  function manageInput(e) {
+    const { name, value } = e.target;
+    setInputs((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   }
+
   return (
     <section>
       <div id="user-input">
         <div className="input-group">
           <p>
             <label>Initial Investment</label>
-            <input type="number" required value={change} onChange={changing} />
+            <input
+              type="number"
+              required
+              name="initialInvestment"
+              value={inputs.initialInvestment}
+              onChange={manageInput}
+            />
           </p>
           <p>
             <label>Annual Investment</label>
-            <input type="number" required value={chy} onChange={changing} />
+            <input type="number" required />
           </p>
         </div>
         <div className="input-group">
@@ -31,8 +46,8 @@ const UserInputs = () => {
           </p>
         </div>
       </div>
-      <p>{change}</p>
-      <p>{chy}</p>
+      <p></p>
+      <h1>{inputs.initialInvestment}</h1>
     </section>
   );
 };
