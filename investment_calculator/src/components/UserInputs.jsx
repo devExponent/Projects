@@ -1,20 +1,20 @@
 import { useState } from "react";
 
-const UserInputs = () => {
-  const [inputs, setInputs] = useState({
-    initialInvestment: "",
-    annualInvestment: "",
-    expectedHours: "",
-    Duration: "",
-  });
+const UserInputs = ({ inputs, dynamiChange }) => {
+  // const [inputs, setInputs] = useState({
+  //   initialInvestment: "",
+  //   annualInvestment: "",
+  //   expectedHours: "",
+  //   Duration: "",
+  // });
 
-  function manageInput(e) {
-    const { name, value } = e.target;
-    setInputs((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  }
+  // function manageInput(e) {
+  //   const { name, value } = e.target;
+  //   setInputs((prev) => ({
+  //     ...prev,
+  //     [name]: value,
+  //   }));
+  // }
 
   return (
     <section>
@@ -27,7 +27,7 @@ const UserInputs = () => {
               required
               name="initialInvestment"
               value={inputs.initialInvestment}
-              onChange={manageInput}
+              onChange={dynamiChange}
             />
           </p>
           <p>
@@ -37,7 +37,7 @@ const UserInputs = () => {
               required
               name="annualInvestment"
               value={inputs.annualInvestment}
-              onChange={manageInput}
+              onChange={dynamiChange}
             />
           </p>
         </div>
