@@ -16,9 +16,6 @@ const UserInputs = () => {
     }));
   }
 
-  let checkInitialInvestment = inputs.initialInvestment;
-  let checkinvestment = inputs.annualInvestment;
-
   return (
     <section>
       <div id="user-input">
@@ -55,10 +52,6 @@ const UserInputs = () => {
           </p>
         </div>
       </div>
-      <p></p>
-      <h1> {checkInitialInvestment} </h1>
-      <h1> {checkinvestment} </h1>
-      <h2>{}</h2>
     </section>
   );
 };
