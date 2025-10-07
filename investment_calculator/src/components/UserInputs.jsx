@@ -1,21 +1,6 @@
 import { useState } from "react";
 
 const UserInputs = ({ inputs, dynamiChange }) => {
-  // const [inputs, setInputs] = useState({
-  //   initialInvestment: "",
-  //   annualInvestment: "",
-  //   expectedHours: "",
-  //   Duration: "",
-  // });
-
-  // function manageInput(e) {
-  //   const { name, value } = e.target;
-  //   setInputs((prev) => ({
-  //     ...prev,
-  //     [name]: value,
-  //   }));
-  // }
-
   return (
     <section>
       <div id="user-input">

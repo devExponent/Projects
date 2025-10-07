@@ -2,8 +2,6 @@ import React from "react";
 // const rows = ["row", "row", "row", "row", "row"];
 
 const UserTable = ({ inputs }) => {
-  let total =
-    Number(inputs.initialInvestment) + Number(inputs.annualInvestment);
   return (
     <table id="result">
       <thead>
@@ -24,7 +22,6 @@ const UserTable = ({ inputs }) => {
           <td>{inputs.annualInvestment}</td>
           <td>{inputs.expectedHours}</td>
           <td>{inputs.duration}</td>
-          <td>{total}</td>
         </tr>
       </tbody>
     </table>
