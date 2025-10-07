@@ -16,6 +16,9 @@ const UserInputs = () => {
     }));
   }
 
+  let checkInitialInvestment = inputs.initialInvestment;
+  let checkinvestment = inputs.annualInvestment;
+
   return (
     <section>
       <div id="user-input">
@@ -32,7 +35,13 @@ const UserInputs = () => {
           </p>
           <p>
             <label>Annual Investment</label>
-            <input type="number" required />
+            <input
+              type="number"
+              required
+              name="annualInvestment"
+              value={inputs.annualInvestment}
+              onChange={manageInput}
+            />
           </p>
         </div>
         <div className="input-group">
@@ -47,7 +56,9 @@ const UserInputs = () => {
         </div>
       </div>
       <p></p>
-      <h1>{inputs.initialInvestment}</h1>
+      <h1> {checkInitialInvestment} </h1>
+      <h1> {checkinvestment} </h1>
+      <h2>{}</h2>
     </section>
   );
 };
