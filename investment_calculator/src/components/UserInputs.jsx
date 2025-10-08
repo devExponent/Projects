@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const UserInputs = ({ inputs, dynamiChange }) => {
+const UserInputs = ({ userInput, setUserInput }) => {
   return (
     <section>
       <div id="user-input">
@@ -11,8 +11,8 @@ const UserInputs = ({ inputs, dynamiChange }) => {
               type="number"
               required
               name="initialInvestment"
-              value={inputs.initialInvestment}
-              onChange={dynamiChange}
+              value={userInput.initialInvestment}
+              onChange={setUserInput}
             />
           </p>
           <p>
@@ -21,8 +21,8 @@ const UserInputs = ({ inputs, dynamiChange }) => {
               type="number"
               required
               name="annualInvestment"
-              value={inputs.annualInvestment}
-              onChange={dynamiChange}
+              value={userInput.annualInvestment}
+              onChange={setUserInput}
             />
           </p>
         </div>
@@ -33,8 +33,8 @@ const UserInputs = ({ inputs, dynamiChange }) => {
               type="number"
               required
               name="expectedHours"
-              value={inputs.expectedHours}
-              onChange={dynamiChange}
+              value={userInput.expectedHours}
+              onChange={setUserInput}
             />
           </p>
           <p>
@@ -43,8 +43,8 @@ const UserInputs = ({ inputs, dynamiChange }) => {
               type="number"
               required
               name="duration"
-              value={inputs.duration}
-              onChange={dynamiChange}
+              value={userInput.duration}
+              onChange={setUserInput}
             />
           </p>
         </div>

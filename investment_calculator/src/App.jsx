@@ -1,13 +1,14 @@
 import { useState } from "react";
 import UserInputs from "./components/UserInputs";
 import UserTable from "./components/UserTable";
+import { calculateInvestmentResults } from "./util/investment";
 
 function App() {
   const [investment, setInvestment] = useState({
-    initialInvestment: "",
-    annualInvestment: "",
-    expectedHours: "",
-    Duration: "",
+    initialInvestment: 1000,
+    annualInvestment: 122,
+    expectedHours: 6,
+    duration: 10,
   });
 
   function handleInvestment(e) {
@@ -17,12 +18,10 @@ function App() {
       [name]: value,
     }));
   }
-
   return (
     <>
-      <UserInputs inputs={investment} dynamiChange={handleInvestment} />
-
-      <UserTable inputs={investment} />
+      <UserInputs userInput={investment} setUserInut={handleInvestment} />
+      <UserTable />
     </>
   );
 }
