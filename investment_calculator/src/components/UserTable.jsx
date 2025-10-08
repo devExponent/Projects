@@ -1,7 +1,9 @@
-import React from "react";
-// const rows = ["row", "row", "row", "row", "row"];
+import { calculateInvestmentResults, euroFormatter } from "../util/investment";
 
 const UserTable = ({ inputs }) => {
+  const result = calculateInvestmentResults(inputs);
+  const format = euroFormatter;
+  console.log(format);
   return (
     <table id="result">
       <thead>
@@ -14,15 +16,17 @@ const UserTable = ({ inputs }) => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          {/* {rows .map((roy, index) => (
-            <td key={index}>{roy}</td>
-          ))} */}
-          <td>{inputs.initialInvestment}</td>
-          <td>{inputs.annualInvestment}</td>
-          <td>{inputs.expectedHours}</td>
-          <td>{inputs.duration}</td>
-        </tr>
+        {result.map((resultData) => {
+          return (
+            <tr key={resultData.year}>
+              <td>{resultData.year}</td>
+              <td> {euroFormatter.format(resultData.valueEndOfYear)} </td>
+              <td> {euroFormatter.format(resultData.interest)} </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );

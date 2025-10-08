@@ -32,8 +32,8 @@ const UserInputs = ({ userInput, setUserInput }) => {
             <input
               type="number"
               required
-              name="expectedHours"
-              value={userInput.expectedHours}
+              name="expectedReturn"
+              value={userInput.expectedReturn}
               onChange={setUserInput}
             />
           </p>
