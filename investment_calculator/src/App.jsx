@@ -7,8 +7,10 @@ function App() {
     initialInvestment: 1000,
     annualInvestment: 122,
     expectedReturn: 6,
-    duration: 11,
+    duration: 10,
   });
+
+  let validInut = investment.duration >= 1;
 
   function handleInvestment(e) {
     const { name, value } = e.target;
@@ -20,7 +22,11 @@ function App() {
   return (
     <>
       <UserInputs userInput={investment} setUserInput={handleInvestment} />
-      <UserTable inputs={investment} />
+      {validInut ? (
+        <UserTable inputs={investment} />
+      ) : (
+        <p className="center">please enter a number greater than 0</p>
+      )}
     </>
   );
 }
