@@ -2,19 +2,6 @@ import { useState } from "react";
 import UserInputs from "./components/UserInputs";
 import UserTable from "./components/UserTable";
 
-function findFactorial(num) {
-  let factorial = 1;
-  for (let i = num; i > 0; i--) {
-    console.log((factorial *= i));
-    // console.log(i);
-    // console.log(factorial);
-  }
-
-  // return factorial;
-}
-
-findFactorial(6); // 120
-
 function App() {
   const [investment, setInvestment] = useState({
     initialInvestment: 1000,
