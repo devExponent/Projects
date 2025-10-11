@@ -9,13 +9,14 @@ const InvestmentTable = () => {
           <th>Total Interest</th>
           <th>Invested Capital</th>
         </tr>
-        <tbody>
-          <tr>
-            <td>Hello</td>
-            <td>Hello</td>
-          </tr>
-        </tbody>
       </thead>
+      <tbody>
+        <tr>
+          <td>q</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+      </tbody>
     </table>
   );
 };
