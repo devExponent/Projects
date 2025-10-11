@@ -1,3 +1,4 @@
+import { useState } from "react";
 const InvestmentTable = () => {
   return (
     <table id="result">

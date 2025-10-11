@@ -18,7 +18,12 @@ function App() {
 
   return (
     <>
-      <UserInputs value={userInput.initialInvestment} />
+      <UserInputs
+        inputValue={userInput.initialInvestment}
+        onHandleInput={(e) =>
+          handleUserInput("initialInvestment", e.target.value)
+        }
+      />
       <InvestmentTable />
       <p>{userInput.initialInvestment}</p>
     </>
