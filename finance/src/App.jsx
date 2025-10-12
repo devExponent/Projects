@@ -3,10 +3,10 @@ import UserInputs from "../src/components/userInput";
 import InvestmentTable from "./components/InvestmentTable";
 function App() {
   const [userInput, setUserInput] = useState({
-    initialInvestment: "11",
-    annualInvestment: "13",
-    expectedReturn: "14",
-    duration: "17",
+    initialInvestment: "",
+    annualInvestment: "",
+    expectedReturn: "",
+    duration: "",
   });
 
   const handleUserInput = (name, value) => {

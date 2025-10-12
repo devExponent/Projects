@@ -13,9 +13,7 @@ const InvestmentTable = ({ input }) => {
       </thead>
       <tbody>
         <tr>
-          <td>{input.duration}</td>
-          <td>1</td>
-          <td>1</td>
+          <td>{input.initialInvestment}</td>
         </tr>
       </tbody>
     </table>
