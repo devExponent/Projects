@@ -4,9 +4,9 @@ import InvestmentTable from "./components/InvestmentTable";
 function App() {
   const [userInput, setUserInput] = useState({
     initialInvestment: "11",
-    annualInvestment: "",
-    expectedReturn: "",
-    duration: "",
+    annualInvestment: "13",
+    expectedReturn: "14",
+    duration: "17",
   });
 
   const handleUserInput = (name, value) => {
@@ -18,14 +18,8 @@ function App() {
 
   return (
     <>
-      <UserInputs
-        inputValue={userInput.initialInvestment}
-        onHandleInput={(e) =>
-          handleUserInput("initialInvestment", e.target.value)
-        }
-      />
-      <InvestmentTable />
-      <p>{userInput.initialInvestment}</p>
+      <UserInputs inputs={userInput} onHandleInput={handleUserInput} />
+      <InvestmentTable input={userInput} />
     </>
   );
 }

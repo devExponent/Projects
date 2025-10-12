@@ -1,5 +1,5 @@
 import { useState } from "react";
-const InvestmentTable = () => {
+const InvestmentTable = ({ input }) => {
   return (
     <table id="result">
       <thead>
@@ -13,7 +13,7 @@ const InvestmentTable = () => {
       </thead>
       <tbody>
         <tr>
-          <td>q</td>
+          <td>{input.duration}</td>
           <td>1</td>
           <td>1</td>
         </tr>
