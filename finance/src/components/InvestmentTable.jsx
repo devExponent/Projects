@@ -2,7 +2,11 @@ import { calculateInvestmentResults } from "../util/investment";
 
 const InvestmentTable = ({ input }) => {
   const result = calculateInvestmentResults(input);
-  console.log(result);
+
+  for (let i = 0; i < 17; i++) {
+    console.log(i);
+  }
+  // console.log(result);
   return (
     <>
       <table id="result">
@@ -16,9 +20,11 @@ const InvestmentTable = ({ input }) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{input.initialInvestment}</td>
-          </tr>
+          {result.map((resultData) => (
+            <tr key={resultData.year}>
+              <td>{resultData.year}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
       {result.year}
