@@ -9,6 +9,8 @@ function App() {
     duration: "",
   });
 
+  let validInput = userInput.duration >= 1;
+
   const handleUserInput = (name, value) => {
     setUserInput((prev) => ({
       ...prev,
@@ -19,7 +21,12 @@ function App() {
   return (
     <>
       <UserInputs inputs={userInput} onHandleInput={handleUserInput} />
-      <InvestmentTable input={userInput} />
+
+      {validInput ? (
+        <InvestmentTable input={userInput} />
+      ) : (
+        <p className="center">Duaration should be greater than 0</p>
+      )}
     </>
   );
 }
