@@ -1,11 +1,11 @@
 import { calculateInvestmentResults } from "../util/investment";
+import { formatter } from "../util/investment";
 
 const InvestmentTable = ({ input }) => {
   const result = calculateInvestmentResults(input);
+  console.log(result);
+  const format = formatter;
 
-  for (let i = 0; i < 17; i++) {
-    console.log(i);
-  }
   // console.log(result);
   return (
     <>
@@ -20,12 +20,15 @@ const InvestmentTable = ({ input }) => {
           </tr>
         </thead>
         <tbody>
-          {result.map((resultData) => (
-            <tr key={resultData.year}>
-              <td>{resultData.year}</td>
-              <td>{resultData.year}</td>
-            </tr>
-          ))}
+          {result.map((resultData) => {
+            return (
+              <tr key={resultData.year}>
+                <td>{resultData.year}</td>
+                <td>{format.format(resultData.valueEndOfYear)}</td>
+                <td>{format.format(resultData.interest)}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
       {result.year}
