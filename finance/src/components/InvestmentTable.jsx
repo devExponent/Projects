@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { calculateInvestmentResults } from "../util/investment";
 const InvestmentTable = ({ input }) => {
   return (
     <table id="result">
@@ -13,7 +13,7 @@ const InvestmentTable = ({ input }) => {
       </thead>
       <tbody>
         <tr>
-          <td>{input.initialInvestment}</td>
+          <td></td>
         </tr>
       </tbody>
     </table>
