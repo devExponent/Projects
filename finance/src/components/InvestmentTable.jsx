@@ -23,6 +23,7 @@ const InvestmentTable = ({ input }) => {
           {result.map((resultData) => (
             <tr key={resultData.year}>
               <td>{resultData.year}</td>
+              <td>{resultData.year}</td>
             </tr>
           ))}
         </tbody>
