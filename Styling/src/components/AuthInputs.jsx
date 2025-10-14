@@ -31,6 +31,7 @@ export default function AuthInputs() {
             onChange={(event) => handleInputChange("email", event.target.value)}
           />
         </p>
+        <p> {enteredEmail || enteredPassword} </p>
         <p>
           <label>Password</label>
           <input
