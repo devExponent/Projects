@@ -1,6 +1,9 @@
 import React from "react";
+import { useState } from "react";
 
 const Handleinput = () => {
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredPassword, setEnteredPassword] = useState("");
   function Changing(value, identifier) {
     if (identifier === "email") {
       setEnteredEmail(value);
@@ -13,20 +16,16 @@ const Handleinput = () => {
       <li>
         <input
           type="text"
-          name="text5"
-          onChange={(e) => Changing("text5", e.target.value)}
+          name="email"
+          onChange={(e) => Changing("email", e.target.value)}
         />
-        <p>{handleInput.text5}</p>
-        <p>{handleInput.text1}</p>
+        <p>{enteredEmail}</p>
 
         <input
           type="text"
           name="text1"
           onChange={(e) => Changing("text1", e.target.value)}
         />
-        <input type="text" name="text2" />
-        <input type="text" name="text3" />
-        <input type="text" name="text4" />
       </li>
     </ul>
   );
