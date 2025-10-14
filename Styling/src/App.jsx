@@ -5,12 +5,12 @@ import Handleinput from "./components/Handleinput.jsx";
 export default function App() {
   return (
     <>
-      {/* <Header />
+      <Header />
       <main>
         <AuthInputs />
       </main>
-       */}
-      <Handleinput />
+
+      {/* <Handleinput /> */}
     </>
   );
 }

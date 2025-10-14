@@ -24,14 +24,13 @@ export default function AuthInputs() {
     <div id="auth-inputs">
       <div className="controls">
         <p>
-          <label>Email</label>
+          <label className="label">Email</label>
           <input
             type="email"
             className={emailNotValid ? "invalid" : undefined}
             onChange={(event) => handleInputChange("email", event.target.value)}
           />
         </p>
-        <p> {enteredEmail || enteredPassword} </p>
         <p>
           <label>Password</label>
           <input

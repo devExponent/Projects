@@ -2,32 +2,32 @@ import React from "react";
 import { useState } from "react";
 
 const Handleinput = () => {
-  const [enteredEmail, setEnteredEmail] = useState("");
-  const [enteredPassword, setEnteredPassword] = useState("fhhfhf");
-  function Changing(value, identifier) {
-    if (identifier === "email") {
-      setEnteredEmail(value);
-    } else {
-      setEnteredPassword(value);
-    }
-  }
-  return (
-    <ul>
-      <li>
-        <input
-          type="text"
-          name="email"
-          onChange={(e) => Changing("email", e.target.value)}
-        />
-        <p>{enteredEmail}</p>
-        {enteredPassword}
+  const [handleInput, setHandleInput] = useState(false);
+  const [NhandleInput, setNHandleInput] = useState(false);
 
-        <input
-          type="text"
-          onChange={(e) => Changing("password", e.target.value)}
-        />
-      </li>
-    </ul>
+  function monitor() {
+    setHandleInput(true);
+  }
+  function Nmonitor() {
+    setNHandleInput(true);
+  }
+
+  const see = handleInput;
+  const Nsee = NhandleInput;
+  return (
+    <div>
+      <h1 style={{ background: see ? "green" : Nsee ? "yellow" : "" }}>
+        CSS is great!
+      </h1>
+      <menu>
+        <li>
+          <button onClick={monitor}>Yes</button>
+        </li>
+        <li>
+          <button onClick={Nmonitor}>No</button>
+        </li>
+      </menu>
+    </div>
   );
 };
 
