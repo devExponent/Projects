@@ -76,7 +76,7 @@ button:focus {
 
 
 
-.label.invalid {
+label.invalid {
   color: #f87171;
 }
 
