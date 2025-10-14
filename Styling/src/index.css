@@ -80,6 +80,10 @@ label.invalid {
   color: #f87171;
 }
 
+.label {
+  color: blue;
+}
+
 input.invalid {
   color: #ef4444;
   border-color: #f73f3f;
