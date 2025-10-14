@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Handleinput = () => {
   const [enteredEmail, setEnteredEmail] = useState("");
-  const [enteredPassword, setEnteredPassword] = useState("");
+  const [enteredPassword, setEnteredPassword] = useState("fhhfhf");
   function Changing(value, identifier) {
     if (identifier === "email") {
       setEnteredEmail(value);
@@ -20,11 +20,11 @@ const Handleinput = () => {
           onChange={(e) => Changing("email", e.target.value)}
         />
         <p>{enteredEmail}</p>
+        {enteredPassword}
 
         <input
           type="text"
-          name="text1"
-          onChange={(e) => Changing("text1", e.target.value)}
+          onChange={(e) => Changing("password", e.target.value)}
         />
       </li>
     </ul>
