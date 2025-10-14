@@ -1,20 +1,12 @@
 import React from "react";
-import { useState } from "react";
 
 const Handleinput = () => {
-  const [handleInput, setHandleInput] = useState({
-    text1: "",
-    text2: "",
-    text3: "",
-    text4: "",
-    text5: "",
-  });
-
-  function Changing(name, value) {
-    setHandleInput((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+  function Changing(value, identifier) {
+    if (identifier === "email") {
+      setEnteredEmail(value);
+    } else {
+      setEnteredPassword(value);
+    }
   }
   return (
     <ul>
@@ -22,12 +14,16 @@ const Handleinput = () => {
         <input
           type="text"
           name="text5"
-          value={handleInput.text5}
-          onChange={(e) => Changing("text 5", e.target.value)}
+          onChange={(e) => Changing("text5", e.target.value)}
         />
         <p>{handleInput.text5}</p>
+        <p>{handleInput.text1}</p>
 
-        <input type="text" name="text1" />
+        <input
+          type="text"
+          name="text1"
+          onChange={(e) => Changing("text1", e.target.value)}
+        />
         <input type="text" name="text2" />
         <input type="text" name="text3" />
         <input type="text" name="text4" />
