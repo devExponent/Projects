@@ -1,4 +1,5 @@
-import "./App.css";
+// import "./App.css";
+import Check from "./check";
 
 function App() {
   return (
