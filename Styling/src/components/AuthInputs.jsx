@@ -39,7 +39,7 @@ export default function AuthInputs() {
           }
         />
       </div>
-      <Inputs />
+
       <div className="actions">
         <button type="button" className="text-button">
           Create a new account
