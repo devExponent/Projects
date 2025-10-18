@@ -1,11 +1,12 @@
 // import "./App.css";
-import Check from "./check";
 
 function App() {
   return (
     <>
       <h1 class="text-xl md:text-9xl font-bold underline">Hello world!</h1>
       <h2>Hello</h2>
+      <h1>dhdhbd</h1>
+      <h4>fdkjfjfn</h4>
     </>
   );
 }
