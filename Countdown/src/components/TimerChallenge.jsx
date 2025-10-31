@@ -1,10 +1,11 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const TimerChallenge = ({ title, targetTime }) => {
   const [startChallenge, setStartChallenge] = useState(false);
+  const handleTimer = useRef(null);
 
-  function handleChallenge() {
+  function handleChallengeStart() {
     setStartChallenge(true);
   }
   return (
@@ -14,7 +15,7 @@ const TimerChallenge = ({ title, targetTime }) => {
         {targetTime} second{targetTime > 1 ? "s" : ""}
       </p>
       <p>
-        <button onClick={handleChallenge}>Start Challenge</button>
+        <button onClick={handleChallengeStart}>Start Challenge</button>
       </p>
       <p>{startChallenge ? "Time is running" : "Timer in Inactive"}</p>
     </section>
