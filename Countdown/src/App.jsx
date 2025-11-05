@@ -17,7 +17,11 @@ function App() {
         ref={playerName}
       />
       <div id="challenges">
-        <TimerChallenge title="easy" targetTime={1} />
+        <TimerChallenge
+          title="easy"
+          targetTime={1}
+          userName={enteredPlayerName}
+        />
         <TimerChallenge title="Not easy" targetTime={5} />
         <TimerChallenge title="Getting tough" targetTime={10} />
         <TimerChallenge title="Pro Only" targetTime={15} />

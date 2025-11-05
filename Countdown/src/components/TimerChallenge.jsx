@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import Resultsmodal from "./Resultsmodal.jsx";
 import Player from "./Player.jsx";
 
-const TimerChallenge = ({ title, targetTime }) => {
+const TimerChallenge = ({ title, targetTime, userName }) => {
   const [timeRemaining, setTimeRemaining] = useState(targetTime * 1000);
   const handleTimer = useRef();
   const dialog = useRef();
@@ -37,6 +37,7 @@ const TimerChallenge = ({ title, targetTime }) => {
         targetTime={targetTime}
         remainingTime={timeRemaining}
         onReset={handleReset}
+        playerName={userName}
       />
 
       <section className="challenge">
