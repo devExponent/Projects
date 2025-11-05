@@ -36,7 +36,7 @@ const TimerChallenge = ({ title, targetTime, userName }) => {
         ref={dialog}
         targetTime={targetTime}
         remainingTime={timeRemaining}
-        onReset={handleReset}
+        onClear={handleReset}
         playerName={userName}
       />
 

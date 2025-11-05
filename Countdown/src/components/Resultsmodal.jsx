@@ -4,7 +4,7 @@ const Resultsmodal = ({
   ref,
   targetTime,
   remainingTime,
-  onReset,
+  onClear,
   playerName,
 }) => {
   const dialog = useRef();
@@ -37,7 +37,7 @@ const Resultsmodal = ({
         You stopped the timer with{" "}
         <strong>{formattedRemainingTime} seconds left</strong>
       </p>
-      <form method="dialog" onSubmit={onReset}>
+      <form method="dialog" onSubmit={onClear}>
         <button>Close</button>
       </form>
     </dialog>,
