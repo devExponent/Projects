@@ -27,7 +27,7 @@ const Resultsmodal = ({
 
   return createPortal(
     <dialog ref={dialog} className="result-modal">
-      <h2>Hello {playerName}</h2>
+      <h2>{playerName ? `Hello ${playerName}` : "Unknown Entity"}</h2>
       {userLost && <h2>You Lost</h2>}
       {!userLost && <h2>Your score is: {Score}</h2>}
       <p>

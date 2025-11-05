@@ -22,9 +22,21 @@ function App() {
           targetTime={1}
           userName={enteredPlayerName}
         />
-        <TimerChallenge title="Not easy" targetTime={5} />
-        <TimerChallenge title="Getting tough" targetTime={10} />
-        <TimerChallenge title="Pro Only" targetTime={15} />
+        <TimerChallenge
+          title="Not easy"
+          targetTime={5}
+          userName={enteredPlayerName}
+        />
+        <TimerChallenge
+          title="Getting tough"
+          targetTime={10}
+          userName={enteredPlayerName}
+        />
+        <TimerChallenge
+          title="Pro Only"
+          targetTime={15}
+          userName={enteredPlayerName}
+        />
       </div>
     </>
   );
